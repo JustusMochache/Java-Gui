@@ -7,38 +7,46 @@ public class Main {
     public static void main(String[] arg) {
 
 
-        ImageIcon icon =new ImageIcon("tower.png");
-        JLabel label = new JLabel();
-        label.setText("hi");
-        label.setIcon(icon);
-        label.setVerticalAlignment(JLabel.BOTTOM);
-        label.setHorizontalAlignment(JLabel.RIGHT);
-        label.setBounds(0,0,79,75);
-
-
-       JPanel redpanel = new JPanel();
-       redpanel.setBackground(Color.RED);
-       redpanel.setBounds(0,0,250,250);
-
-        JPanel bluepanel = new JPanel();
-        bluepanel.setBackground(Color.BLUE);
-        bluepanel.setBounds(250,0,250,250);
-
-        JPanel greenpanel = new JPanel();
-        greenpanel.setBackground(Color.GREEN);
-        greenpanel.setBounds(0,250,500,250);
 
 
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(750,750);
 //        frame.setLayout(null);
+        frame.setLayout(new BorderLayout(10,10));
         frame.setVisible(true);
-        bluepanel.add(label);
-        frame.add(redpanel);
-        frame.add(bluepanel);
-        frame.add(greenpanel);
 
-      //  frame.pack(); //resizable option for set layout
+        JPanel panel1 = new JPanel();
+        JPanel panel2 = new JPanel();
+
+        JPanel panel3 = new JPanel();
+
+        JPanel panel4 = new JPanel();
+
+        JPanel panel5= new JPanel();
+
+        panel1.setBackground(Color.RED);
+        panel2.setBackground(Color.GREEN);
+        panel3.setBackground(Color.YELLOW);
+        panel4.setBackground(Color.MAGENTA);
+        panel5.setBackground(Color.BLUE);
+
+        panel1.setPreferredSize(new Dimension(100,100));
+        panel2.setPreferredSize(new Dimension(100,100));
+        panel3.setPreferredSize(new Dimension(100,100));
+        panel4.setPreferredSize(new Dimension(100,100));
+        panel5.setPreferredSize(new Dimension(100,100));
+
+        frame.add(panel1,BorderLayout.NORTH);
+        frame.add(panel2,BorderLayout.WEST);
+        frame.add(panel3,BorderLayout.EAST);
+        frame.add(panel4,BorderLayout.SOUTH);
+        frame.add(panel5,BorderLayout.CENTER);
+
+
+
+
+
+        //  frame.pack(); //resizable option for set layout
     }
 }
