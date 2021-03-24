@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 
 
@@ -8,32 +7,38 @@ public class Main {
     public static void main(String[] arg) {
 
 
-        ImageIcon image = new ImageIcon("tower.jpeg");
-        Border border = BorderFactory.createLineBorder(Color.BLUE); //for border
-
+        ImageIcon icon =new ImageIcon("tower.png");
         JLabel label = new JLabel();
-        label.setText("Hey Bro");
+        label.setText("hi");
+        label.setIcon(icon);
+        label.setVerticalAlignment(JLabel.BOTTOM);
+        label.setHorizontalAlignment(JLabel.RIGHT);
+        label.setBounds(0,0,79,75);
 
-        label.setHorizontalTextPosition(JLabel.RIGHT);
-        label.setVerticalTextPosition(JLabel.TOP);
-        label.setForeground(new Color(0x00ff00)); //st font color
-        label.setFont(new Font("My Boli",Font.PLAIN,20));//set font
-        label.setIconTextGap(-25);//sets gap
-        label.setBackground(Color.black); // st backgroundcolor
-        label.setOpaque(true); //display background color
-        label.setBorder(border);
-        label.setBounds(100,100,250,250); //SET Y,X POSITION
 
-        label.setVerticalAlignment(JLabel.CENTER);//STE VERTICAL POSITION WITHIN LABEL
-        label.setHorizontalAlignment(JLabel.CENTER);
+       JPanel redpanel = new JPanel();
+       redpanel.setBackground(Color.RED);
+       redpanel.setBounds(0,0,250,250);
+
+        JPanel bluepanel = new JPanel();
+        bluepanel.setBackground(Color.BLUE);
+        bluepanel.setBounds(250,0,250,250);
+
+        JPanel greenpanel = new JPanel();
+        greenpanel.setBackground(Color.GREEN);
+        greenpanel.setBounds(0,250,500,250);
+
 
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500,500);
-
+        frame.setSize(750,750);
         frame.setLayout(null);
         frame.setVisible(true);
-        frame.add(label);
+        bluepanel.add(label);
+        frame.add(redpanel);
+        frame.add(bluepanel);
+        frame.add(greenpanel);
+
       //  frame.pack(); //resizable option for set layout
     }
 }
