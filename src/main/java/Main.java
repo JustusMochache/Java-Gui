@@ -32,7 +32,7 @@ public class Main {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(750,750);
-        frame.setLayout(null);
+//        frame.setLayout(null);
         frame.setVisible(true);
         bluepanel.add(label);
         frame.add(redpanel);
